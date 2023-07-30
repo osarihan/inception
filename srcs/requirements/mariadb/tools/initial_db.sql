@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS wordpress;
+CREATE USER IF NOT EXISTS 'osarihan'@'%' IDENTIFIED BY 'pass123';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'osarihan'@'%';
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'passroot123';

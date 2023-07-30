@@ -1,6 +1,6 @@
-FROM debian:buster
+FROM	debian:buster
 
-RUN apt-get update && apt-get install -y nginx openssl
+RUN	apt-get update && apt-get install -y nginx openssl
 
 RUN mkdir /etc/nginx/ssl
 
@@ -12,6 +12,6 @@ RUN mkdir -p /run/nginx
 
 ENTRYPOINT ["var/www/nginx_start.sh"]
 
-EXPOSE 443
+EXPOSE	443
 
 CMD ["nginx", "-g", "daemon off;"]
